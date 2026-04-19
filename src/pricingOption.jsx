@@ -6,7 +6,7 @@ const PricingOption = ({pricePromise}) => {
         <div className='grid grid-cols-3 gap-5 bg-white mb-20 px-8 md:px-30 py-3 z-50'>
           {
                 pricingData.map(price=>
-               ( <PricingCard key={price.id} price={price}></PricingCard>)
+               ( <PricingCard key={price.id} price={price} badge_text={price.badge_text}></PricingCard>)
             )
                      }  
         </div>

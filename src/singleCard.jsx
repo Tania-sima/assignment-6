@@ -1,6 +1,6 @@
 import React ,{useState} from 'react';
 import './App.css'
-
+ import { ToastContainer,toast} from 'react-toastify';
 const SingleCard =( ({card , handleBuyNow,handleCart,onAdd}) => {
   const [isAdded, setAdded] = useState(false);
   const handleLast=()=>{
@@ -33,7 +33,7 @@ const SingleCard =( ({card , handleBuyNow,handleCart,onAdd}) => {
        <li className='list-none'> <i class="fa-solid fa-check" style={{color:'green'}}></i> {card.features[1]} </li>     
        <li className='list-none'> <i class="fa-solid fa-check" style={{color:'green'}}></i> {card.features[2]} </li>     
        </ol></div>
-      <button  onClick={()=>{setAdded(true); {if (!isAdded) {
+      <button  onClick={()=>{setAdded(true);  {if (!isAdded) {toast("Added To Cart!");
       handleBuyNow(), handleLast()}}} } className= {!isAdded? "bg-gradient-to-r from-blue-700 to-purple-800 text-white px-28  py-2 rounded-full text-sm font-semibold shadow-md whitespace-nowrap mt-5 " : "bg-green-500 text-white px-20  py-2 rounded-full text-sm font-semibold shadow-md whitespace-nowrap mt-5 "}>{!isAdded? ("Buy Now"):(<><i class="fa-solid fa-check"></i> Added To Cart!</>)} </button>
     </div>
 

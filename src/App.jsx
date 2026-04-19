@@ -22,22 +22,27 @@ const pricePromise= fetch('pricingData.json')
 .then(res=> res.json());
 function App() {
   const [isPremium, setPremium] = useState(false);
-  const [count, setCount] = useState(0);
+  
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart"))||[]);
+
+  const [count, setCount] = useState(cart.length);
 const handleCart=(product)=>{
-  setCart((newCart)=>[...cart,product]);
+  const newCart=[...cart,product];
+  setCart(newCart);
  
   localStorage.setItem("cart",JSON.stringify(newCart));
 };
 const handleRemove = (id) => {
   const updatedCart = cart.filter(item => item.id !== id);
   setCart(updatedCart);
+  setCount(updatedCart.length);
   localStorage.setItem("cart", JSON.stringify(updatedCart));
 };
-// const checkOut=(product)=>{
-//   // setCart((proceedCheckOut)=> cart.filter(item));
-  
-// }
+const checkOut=()=>{
+setCart([]);
+setCount(0);
+localStorage.removeItem("cart");
+ };
   
 
  

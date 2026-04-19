@@ -1,10 +1,10 @@
 import React from 'react';
 import card from "./singleCard"
-
+import { ToastContainer,toast} from 'react-toastify';
 import cartIcon from "./assets/products/shopping-cart.png"
 
 
-const Premium = ({cart,handleRemove,item}) => {
+const Premium = ({cart,handleRemove,checkOut}) => {
   const total= cart.reduce((total,item)=> total+ item.price,0)
   
     return (
@@ -39,9 +39,9 @@ const Premium = ({cart,handleRemove,item}) => {
       <h2 className='font-bold text-[14px]'>{cartData.title}</h2>
        <span className=' text-[14px]'>${cartData.price}</span>
       </div>
-     <div class='text-red-700 font-bold '><button onClick={()=>handleRemove(cartData.id)}  className='btn btn-ghost'>Remove</button></div>
+     <div class='text-red-700 font-bold '><button onClick={()=> {toast("Remove"); handleRemove(cartData.id)}}  className='btn btn-ghost'>Remove</button></div>
 </div>
-
+ {/* toast.error("Remove" */}
     </div> 
    
     </div>   
@@ -54,7 +54,9 @@ const Premium = ({cart,handleRemove,item}) => {
 <div className=' w-60'><h3>Total</h3></div>
 <div>${total}</div>
     </div>
-<div><button class='btn btn-primary px-100 ml-2' >Proceed to Checkout</button></div>
+<div><button class='btn btn-primary px-100 ml-2' onClick={()=>{toast("Proceed to Checkout");
+  if(cart.length>0){
+  checkOut()}}}>Proceed to Checkout</button></div>
 </div>
 {/* ============= */}
 </div>
