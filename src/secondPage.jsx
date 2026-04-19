@@ -19,8 +19,8 @@ const SecondPage = ({isPremium, setPremium,count, handleCart,cart}) => {
     </p>
 
     
-    <div className="flex justify-center">
-      <div className="bg-[#F3F4F6] p-1.5 rounded-full inline-flex items-center gap-2 border border-gray-200 ml-120">
+    <div className=" mx-auto  ">
+      <div className="bg-[#F3F4F6] p-1.5 rounded-full inline-flex items-center gap-2 border border-gray-200 ">
         
        
         <button onClick={()=>{setPremium(false) }}  className={!isPremium? "bg-gradient-to-r from-blue-700 to-purple-800 text-white px-8 py-2 rounded-full text-sm font-semibold shadow-md":"text-gray-500 px-8 py-2 rounded-full text-sm font-semibold hover:bg-gray-200 transition"} >

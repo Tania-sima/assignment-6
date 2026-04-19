@@ -12,7 +12,7 @@ const StepCard = (({step}) => {
     </div>
   
    <h3 className='font-semibold text-[20px]'>{step.title}</h3>
-      <p className='mt-3'>{step.description}</p>
+      <p className='mt-3 text-gray-500'>{step.description}</p>
     </div>
        
     );

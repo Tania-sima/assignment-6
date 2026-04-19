@@ -4,7 +4,7 @@ import Premium from './premium.jsx';
 const CardOption = ({cardPromise,count,setCount,onAdd}) => {
     const cardData=use(cardPromise);
     return (
-        <div className='grid grid-cols-3 gap-5 bg-gray-50 px-8 md:px-30 py-3 shadow-sm sticky top-0 z-50'>{
+        <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-5 bg-gray-50 px-8 md:px-30 py-3 shadow-sm sticky top-0 z-50'>{
             cardData.map(card=>(
                 <SingleCard key={card.id} card={card} handleBuyNow ={() => setCount(count + 1)}   onAdd={onAdd} > </SingleCard>)
             

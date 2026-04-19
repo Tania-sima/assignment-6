@@ -37,7 +37,7 @@ const Premium = ({cart,handleRemove,checkOut}) => {
 <div className='flex flex-inline gap-140 mr-50' >
       <div className=' w-60'>
       <h2 className='font-bold text-[14px]'>{cartData.title}</h2>
-       <span className=' text-[14px]'>${cartData.price}</span>
+       <span className=' text-[14px] text-gray-600'>${cartData.price}</span>
       </div>
      <div class='text-red-700 font-bold '><button onClick={()=> {toast("Remove"); handleRemove(cartData.id)}}  className='btn btn-ghost'>Remove</button></div>
 </div>
@@ -51,7 +51,7 @@ const Premium = ({cart,handleRemove,checkOut}) => {
 <div>
  
     <div className='flex flex-inline gap-170 font-bold mb-5 mt-5 ml-2'>
-<div className=' w-60'><h3>Total</h3></div>
+<div className=' w-60 text-gray-600 font-normal'><h3>Total:</h3></div>
 <div>${total}</div>
     </div>
 <div><button class='btn btn-primary px-100 ml-2' onClick={()=>{toast("Proceed to Checkout");
