@@ -4,7 +4,7 @@ const PricingCard = (({price,badge_text}) => {
     return (
 
         
-<div className= {badge_text?'relative bg-gradient-to-r from-blue-700 to-purple-800 rounded-3xl p-8 text-white border border-gray-200 hover:shadow-md h-full' :'bg-gray-50 rounded-3xl p-8 border border-gray-200 hover:shadow-md h-full'} >
+<div className= {badge_text?'relative bg-gradient-to-r from-blue-700 to-purple-800 rounded-3xl p-8 text-white border border-gray-200 hover:shadow-md h-full sm:mx-auto md:mx-auto' :'bg-gray-50 rounded-3xl p-8 border border-gray-200 hover:shadow-md h-full sm:mx-auto md:mx-auto'} >
 {
   badge_text &&
   ( <div className='absolute -top-3 left-1/2 -translate-x-1/2 z-20'><span className='bg-yellow-100 px-4 py-1.5 rounded-full text-xs font bold text-red-700 whitespace-nowrap shadow-sm'>{badge_text}</span></div>)

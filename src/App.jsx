@@ -202,7 +202,7 @@ software—all in one place. Start creating faster today. Explore Products</p>
 
 <div>
   <hr className='text-gray-600'></hr>
-  <div className='lg:flex flex-inline md:grid grid-cols-1 sm:grid grid-cols-1 gap-90 py-5'>
+  <div className='lg:flex flex-inline md:grid grid-cols-1 sm:grid grid-cols-1 lg:gap-90 md:gap-40 sm:gap-10 py-5'>
   <div>
     <p className='text-gray-400 ml-5'>&copy; 2026 Digitools. All rights reserved.</p>
   </div>
